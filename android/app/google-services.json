@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "607809773019",
+    "project_id": "pomodoro-21e86",
+    "storage_bucket": "pomodoro-21e86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607809773019:android:a9a0b20d7843c42f875bfe",
+        "android_client_info": {
+          "package_name": "com.example.pomolab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607809773019-mubshg40g7p2fbb9gj9kk39mouh1hi1b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5nrWxJs1raHa2lIcUgcuTDaXFmS7EtgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607809773019-g3dlfco95md284vm3533o5k5dit3l2gj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "607809773019-13ch5897n23dveed1kdoolvbbojj9g12.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.pomolab"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
