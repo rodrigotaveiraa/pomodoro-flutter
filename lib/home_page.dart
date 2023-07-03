@@ -78,7 +78,7 @@ class _PomodoroState extends State<Pomodoro> {
           child: Column(
             children: <Widget>[
               Image.asset(
-                'assets/images/tomato.png',
+                'images/tomato.png',
                 height: 250,
               ),
               Text(
@@ -114,7 +114,8 @@ class _PomodoroState extends State<Pomodoro> {
                     child: !startedPomodoro
                         ? Icon(Icons.play_arrow)
                         : Icon(Icons.stop),
-                    backgroundColor: !startedPomodoro ? Colors.green : Colors.red,
+                    backgroundColor:
+                        !startedPomodoro ? Colors.green : Colors.red,
                   ),
                 ],
               ),

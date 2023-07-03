@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class PomodoroTimerPage extends StatefulWidget {
   final int pomodoroDuration;
@@ -27,6 +28,7 @@ class _PomodoroTimerPageState extends State<PomodoroTimerPage> {
   bool isPomodoro = true;
   bool isTimerRunning = false;
   bool isBreak = false;
+  final player = AudioPlayer();
 
   @override
   void initState() {
@@ -59,6 +61,12 @@ class _PomodoroTimerPageState extends State<PomodoroTimerPage> {
     );
   }
 
+  void playSound() async {
+    final player = AudioPlayer();
+    await player.play(UrlSource(
+        'https://drive.google.com/drive/u/0/my-drive?lfhs=2')); // will immediately start playing
+  }
+
   void startTimer() {
     setState(() {
       isTimerRunning = true;
@@ -89,11 +97,13 @@ class _PomodoroTimerPageState extends State<PomodoroTimerPage> {
             isPomodoro = false;
             totalTime = widget.breakDuration;
             isBreak = true;
+            playSound();
             showNotification("Fim do Pomodoro", "Hora do intervalo!");
           } else {
             isPomodoro = true;
             totalTime = widget.pomodoroDuration;
             isBreak = false;
+            playSound();
             showNotification("Fim do Intervalo", "Hora de trabalhar!");
             if (widget.remainingPomodoros > 0) {
               widget.remainingPomodoros--;

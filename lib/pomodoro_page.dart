@@ -45,12 +45,16 @@ class PomodoroPage extends StatelessWidget {
         ),
       ),
       drawer: Container(
-        width: MediaQuery.of(context).size.width * 0.8,  // Define a largura do drawer
+        width: MediaQuery.of(context).size.width *
+            0.8, // Define a largura do drawer
         child: Drawer(
           child: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [Colors.red.shade400, Colors.red.shade900],  // Cores do degradê
+                colors: [
+                  Colors.red.shade400,
+                  Colors.red.shade900
+                ], // Cores do degradê
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
@@ -60,7 +64,8 @@ class PomodoroPage extends StatelessWidget {
               children: <Widget>[
                 DrawerHeader(
                   decoration: BoxDecoration(
-                    color: Colors.transparent,  // Deixe o DrawerHeader transparente
+                    color:
+                        Colors.transparent, // Deixe o DrawerHeader transparente
                   ),
                   child: Text(
                     'Menu',
@@ -72,7 +77,8 @@ class PomodoroPage extends StatelessWidget {
                 ),
                 ListTile(
                   leading: Icon(Icons.add_box_outlined, color: Colors.white),
-                  title: Text('Adicionar tarefa', style: TextStyle(color: Colors.white)),
+                  title: Text('Adicionar tarefa',
+                      style: TextStyle(color: Colors.white)),
                   onTap: () {
                     Navigator.push(
                       context,
@@ -82,7 +88,8 @@ class PomodoroPage extends StatelessWidget {
                 ),
                 ListTile(
                   leading: Icon(Icons.list, color: Colors.white),
-                  title: Text('Ver tarefas', style: TextStyle(color: Colors.white)),
+                  title: Text('Ver tarefas',
+                      style: TextStyle(color: Colors.white)),
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => ViewTasksPage()),
